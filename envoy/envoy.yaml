@@ -12,6 +12,10 @@ static_resources:
     - filters:
       - name: envoy.http_connection_manager
         config:
+          access_log:
+          - name: envoy.file_access_log
+            config:
+              path: "/dev/stdout"
           codec_type: auto
           stat_prefix: ingress_http
           route_config:
@@ -21,7 +25,7 @@ static_resources:
               domains: ["*"]
               routes:
               - match: { prefix: "/" }
-                route: { cluster: echo_service }
+                route: { cluster: greeting_service }
               cors:
                 allow_origin: ["*"]
                 allow_methods: GET, PUT, DELETE, POST, OPTIONS
@@ -34,9 +38,9 @@ static_resources:
           - name: envoy.cors
           - name: envoy.router
   clusters:
-  - name: echo_service
+  - name: greeting_service
     connect_timeout: 0.25s
     type: logical_dns
     http2_protocol_options: {}
     lb_policy: round_robin
-    hosts: [{ socket_address: { address: 127.0.0.1, port_value: 6565 }}]
+    hosts: [{ socket_address: { address: greeting, port_value: 6565 }}]

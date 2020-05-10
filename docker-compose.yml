@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  envoy:
+    build: ./envoy
+    ports:
+    - 8080:8080
+    - 9901:9901
+    depends_on: 
+    - greeting
+  greeting:
+    build: ./gretting
+    ports:
+    - 6565:6565
+  greeting-client:
+    build: ./greeting-client
+    ports:
+      - 8081:80
+    depends_on: 
+    - greeting
