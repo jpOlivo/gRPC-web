@@ -5,3 +5,5 @@ Image from [blog.envoyproxy.io](https://blog.envoyproxy.io/envoy-and-grpc-web-a-
 
 ## References
 * [Envoy and gRPC Web a fresh new alternative to REST](https://blog.envoyproxy.io/envoy-and-grpc-web-a-fresh-new-alternative-to-rest-6504ce7eb880)
+* [Vuejs](https://vuejs.org/)
+* [gRPC-web basics](https://grpc.io/docs/languages/web/basics/)
