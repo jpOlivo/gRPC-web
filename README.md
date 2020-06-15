@@ -1,4 +1,4 @@
-# gRPC-web
+# Summary
 
 ![gRPC-web](https://miro.medium.com/max/2000/1*mAkZWyRD9gKyBEOaqEFm-A.png)
 Image from [blog.envoyproxy.io](https://blog.envoyproxy.io/envoy-and-grpc-web-a-fresh-new-alternative-to-rest-6504ce7eb880)
